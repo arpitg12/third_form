@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Survey Form with Dependent Questions and Dynamic Sections
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objective
+This project implements an advanced survey form using React, featuring complex conditional fields, dynamic sections, and integration with an external API for fetching additional questions.
 
-## Available Scripts
+## Features
+- **Dynamic Sections**: Conditionally display sections based on the selected survey topic.
+- **External API Integration**: Fetch additional questions dynamically based on the survey topic selection.
+- **Validation**: Ensures all required fields are filled out correctly before submission.
+- **Summary Display**: Shows a summary of the entered data and additional questions upon form submission.
 
-In the project directory, you can run:
+## Form Fields
+- **Full Name**: Required text input for participant's full name.
+- **Email**: Required email input for participant's email address.
+- **Survey Topic**: Dropdown selection (Technology, Health, Education).
+- **Technology Section**:
+  - **Favorite Programming Language**: Dropdown (JavaScript, Python, Java, C#).
+  - **Years of Experience**: Number input.
+- **Health Section**:
+  - **Exercise Frequency**: Dropdown (Daily, Weekly, Monthly, Rarely).
+  - **Diet Preference**: Dropdown (Vegetarian, Vegan, Non-Vegetarian).
+- **Education Section**:
+  - **Highest Qualification**: Dropdown (High School, Bachelor's, Master's, PhD).
+  - **Field of Study**: Text input.
+- **Feedback**: Textarea.
 
-### `npm start`
+## Technologies Used
+- React
+- Custom Hooks (`useForm`, `useFormValidation`)
+- External API for dynamic question fetching
+- HTML/CSS for styling
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Setup Instructions
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Install dependencies using `npm install`.
+4. Start the development server with `npm start`.
+5. Open your browser and go to `http://localhost:3000` to view the form.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Custom Hooks
+- **useForm**: Manages form state including field values and visibility based on conditional logic.
+- **useFormValidation**: Handles form validation logic based on defined rules.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## External API Integration
+- Utilizes an external API (`api.js`) to fetch additional survey questions based on the selected survey topic.
 
-### `npm run build`
+## Additional Notes
+- Ensure all dependencies are installed (`react`, `react-dom`, etc.) before running the application.
+- The form UI is designed to provide a seamless user experience with clear feedback on errors and dynamically fetched questions.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to customize and expand upon this project as needed. Happy coding!
